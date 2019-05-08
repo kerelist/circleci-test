@@ -1,0 +1,22 @@
+{
+  "name": "circleci-test",
+  "version": "1.0.0",
+  "description": "testing out CircleCI",
+  "main": "script.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kerelist/circleci-test.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kerelist/circleci-test/issues"
+  },
+  "homepage": "https://github.com/kerelist/circleci-test#readme",
+  "devDependencies": {
+    "mocha": "^6.1.4"
+  }
+}
