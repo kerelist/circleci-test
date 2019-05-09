@@ -18,13 +18,6 @@ jobs:
           key: dependency-cache-{{ checksum "package.json" }}
           paths:
             - node_modules
-
-  test:
-    docker: 
-      - image: circleci/node:8
-    working_directory: ~/circleci-test
-    steps:
-      - checkout
       - run:
           name: Jest
           command: npm test
@@ -34,6 +27,3 @@ workflows:
   test_with_jest:
     jobs:
       - build
-      - test:
-          requires:
-            - build
