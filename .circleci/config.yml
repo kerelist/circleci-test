@@ -24,8 +24,22 @@ jobs:
           name: Jest
           command: npm test
 
+  deploy:
+    working_directory: ~/circleci-test
+    steps: 
+      - run:
+          name: Deploy Over SSH
+          command: | 
+            scp -r ~/circleci-test "$SSH_USER@$SSH_HOST:$SSH_PATH"
+
 workflows:
   version: 2.1
   test_with_jest:
     jobs:
       - build
+        - deploy:
+            requires:
+              - build
+            filters:
+              branches: 
+                only: master
