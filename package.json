@@ -4,7 +4,7 @@
   "description": "testing out CircleCI",
   "main": "script.js",
   "scripts": {
-    "test": "mocha"
+    "test": "jest --runInBand"
   },
   "repository": {
     "type": "git",
@@ -17,6 +17,14 @@
   },
   "homepage": "https://github.com/kerelist/circleci-test#readme",
   "devDependencies": {
-    "mocha": "^6.1.4"
+    "fs": "0.0.1-security",
+    "jest": "^24.8.0",
+    "jest-puppeteer": "^4.1.1",
+    "jsdom": "^15.0.0",
+    "path": "^0.12.7",
+    "puppeteer": "^1.15.0"
+  },
+  "jest": {
+    "preset": "jest-puppeteer"
   }
 }
